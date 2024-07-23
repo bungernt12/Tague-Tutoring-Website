@@ -4,8 +4,8 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #d48c6a; /* 10% */
+  background-color: #522816; /* 60% */
 }
 
 /* Container for content */
@@ -14,12 +14,34 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  color: #d48c6a; /* 10% */
+}
+
+/* Banner Section */
+.banner {
+  background-color: #834223; /* 30% */
+  color: #d48c6a; /* 10% */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.banner p {
+  margin: 0;
+  font-size: 1.5em;
 }
 
 /* Headings */
 h1,
-h2 {
-  color: #333;
+h2,
+h3 {
+  color: #d48c6a; /* 10% */
   margin-bottom: 10px;
 }
 
@@ -82,9 +104,10 @@ section {
 
 /* Background and Border for Text Divs */
 .text-container {
-  background-color: #e0e0e0; /* Light grey background */
+  background-color: #834223; /* 30% */
   border-radius: 8px; /* Rounded borders */
   padding: 15px; /* Padding inside the div */
+  color: #d48c6a; /* 10% */
 }
 
 /* Responsive Design */
