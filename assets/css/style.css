@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Container for content */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headings */
+h1,
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* Add some spacing between sections */
+section {
+  margin-bottom: 20px;
+}
+
+/* Columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p,
+  .contact-info {
+    font-size: 1em;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
