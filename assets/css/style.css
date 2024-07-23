@@ -80,6 +80,13 @@ section {
   min-width: 300px;
 }
 
+/* Background and Border for Text Divs */
+.text-container {
+  background-color: #e0e0e0; /* Light grey background */
+  border-radius: 8px; /* Rounded borders */
+  padding: 15px; /* Padding inside the div */
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   h1 {
