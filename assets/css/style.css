@@ -1,11 +1,22 @@
+:root {
+  --bg-color: #522816;
+  --section-color: #683b27;
+  --subheader-color: #d48c6a;
+  --text-color: #f0e5e0;
+  /* --bg-color: #16522e;
+  --section-color: #27683c;
+  --subheader-color: #6ad475;
+  --text-color: #d1bcb2;  */
+}
+
 /* General Styles */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #d48c6a; /* 10% */
-  background-color: #522816; /* 60% */
+  color: var(--subheader-color); /* 10% */
+  background-color: var(--bg-color); /* 60% */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +28,27 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  color: #d1bcb2; /* 10% */
+  color: var(--text-color); /* 10% */
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  max-width: 1000px;
+  height: 8vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  gap: 10%;
+  padding-right: 20%;
+  background-color: var(--bg-color); /* 60% */
+}
+
+main {
+  position: relative;
+  top: 8vh;
+  z-index: 0;
 }
 
 /* Banner Section */
@@ -25,12 +56,11 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #683b27; /* 30% */
-  color: #d48c6a; /* 10% */
-  padding: 20px;
+  background-color: var(--section-color); /* 30% */
+  color: var(--subheader-color); /* 10% */
   border-radius: 8px;
   margin-bottom: 20px;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   max-width: 1000px;
 }
@@ -44,6 +74,7 @@ body {
 .bannerPhoto {
   width: 350px;
   height: auto;
+  margin: 0;
 }
 
 .banner h1 {
@@ -60,7 +91,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #e4ae95; /* 10% */
+  color: var(--subheader-color); /* 10% */
   margin-bottom: 10px;
 }
 
@@ -124,14 +155,14 @@ section {
 
 /* Background and Border for Text Divs */
 .text-container {
-  background-color: #683b27; /* 30% */
+  background-color: var(--section-color); /* 30% */
   border-radius: 8px; /* Rounded borders */
   padding: 15px; /* Padding inside the div */
-  color: #ffffff; /* 10% */
+  color: var(--text-color); /* 10% */
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 1050px) {
   h1 {
     font-size: 2em;
   }
@@ -145,7 +176,12 @@ section {
     font-size: 1em;
   }
 
-  .row {
+  .banner {
     flex-direction: column;
+    justify-content: flex-start;
+  }
+  .bannerPhoto {
+    width: 300px;
+    height: auto;
   }
 }
