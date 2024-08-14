@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-color: #522816;
   --section-color: #683b27;
@@ -43,6 +47,10 @@ body {
   gap: 10%;
   padding-right: 20%;
   background-color: var(--bg-color); /* 60% */
+}
+
+a {
+  color: var(--subheader-color);
 }
 
 main {
@@ -139,18 +147,6 @@ img {
 /* Add some spacing between sections */
 section {
   margin-bottom: 20px;
-}
-
-/* Columns */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.column {
-  flex: 1;
-  min-width: 300px;
 }
 
 /* Background and Border for Text Divs */
