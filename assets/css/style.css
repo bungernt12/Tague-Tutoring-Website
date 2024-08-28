@@ -6,6 +6,7 @@ html {
   --bg-color: #522816;
   --section-color: #683b27;
   --subheader-color: #d48c6a;
+  --main-header-color: #dcb7a6;
   --text-color: #f0e5e0;
   /* --bg-color: #16522e;
   --section-color: #27683c;
@@ -96,7 +97,9 @@ main {
 }
 
 /* Headings */
-h1,
+h1 {
+  color: var(--main-header-color);
+}
 h2,
 h3 {
   color: var(--subheader-color); /* 10% */
