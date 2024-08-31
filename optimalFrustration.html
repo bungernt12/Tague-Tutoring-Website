@@ -13,13 +13,11 @@
         <a href="./corrections.html"><p>Articles</p></a>
         <a href="./index.html#contact"><p>Contact</p></a>
     </nav>
-        <!-- Include Marked.js library -->
+    <main>       <!-- Include Marked.js library -->
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <!-- Markdown content source in a hidden textarea -->
 <textarea id="markdown-content" style="display:none;">
-
-# For some reason this needs to be here
 
 # Optimal Frustration in Tutoring
 
@@ -66,7 +64,8 @@ Wood, D., Bruner, J. S., & Ross, G. (1976). The Role of Tutoring in Problem Solv
 </textarea>
 
 <!-- Output container -->
-<div id="markdown-output"></div>
+<!-- <div id="markdown-output"></div> -->
+<article class="container text-container" id="markdown-output"></article>
 
 <!-- Conversion script -->
 <script>
@@ -79,5 +78,7 @@ Wood, D., Bruner, J. S., & Ross, G. (1976). The Role of Tutoring in Problem Solv
   // Display the HTML content
   document.getElementById('markdown-output').innerHTML = htmlContent;
 </script>
+</main>
+ 
 </body>
 </html>

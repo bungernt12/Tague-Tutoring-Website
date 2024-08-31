@@ -3,26 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art of Corrections</title>
+    <title>Optimal Frustration Level</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.16/marked.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <a href="./index.html#about-container"><p>About</p></a>
         <a href="./corrections.html"><p>Articles</p></a>
-      <a href="./index.html#contact"><p>Contact</p></a>
+        <a href="./index.html#contact"><p>Contact</p></a>
     </nav>
-    <main>
-        <article class="container text-container">
-            <h1>The Art of Corrections</h1>
-            <p>      Corrections are an integral part of learning, but they can be counterproductive if not delivered with sensitivity and awareness. While the goal of correction is often to guide and improve understanding, excessive or poorly timed corrections can hinder rather than help. To be effective, corrections should be issued thoughtfully, considering the learner’s grasp of the material, their emotional state, and the nature of the relationship between the tutor and the learner.
-            </p><p>      People have a limited bandwidth for absorbing new information and skills. For example, if my student, John Smith, makes five different mistakes on the same problem, it’s unlikely that he can process all five corrections at once. Research in working memory suggests that people can juggle about four ideas simultaneously. Even presenting him with two corrections at once might be overwhelming, as he’s trying to consider the new information in the context of what he already knows. It’s the tutor’s role to provide feedback in a manageable way, turning a firehose of information into a water fountain.
-            </p><p>      A learner’s emotional state greatly influences their receptiveness to corrections. When feedback is too frequent or not aligned with a learner’s current level of understanding, it can lead to cognitive overload and feelings of inadequacy. For instance, if John understands the first two steps of a problem but struggles with step three, he might feel ashamed and believe that his intelligence is in question. This sense of failure can deter him from continuing, even if he could eventually grasp the remaining steps. It’s essential to be mindful of verbal and non-verbal cues, such as John’s reaction of “oooohhhh, ok,” which might mask confusion or reluctance. John might fear looking foolish or disappointing me as a tutor. He might even be trying to protect me from shame because they don’t want me to feel bad as a tutor. By delivering corrections with empathy, we can build confidence and encourage perseverance rather than exacerbating feelings of inadequacy.
-            </p><p>      The relationship between the tutor and the learner significantly impacts how corrections are received. Building rapport and mutual respect enhances the effectiveness of feedback. Learners are more likely to accept corrections from someone they respect and who genuinely cares about their success. If John feels that corrections come from a place of support and affection, he is less likely to feel demoralized. A positive, trusting relationship creates a safe environment where feedback is viewed as a tool for growth rather than a personal critique. This supportive dynamic encourages learners to embrace corrections and use them as opportunities for improvement.
-            </p><p>      In summary, corrections are most effective when delivered with consideration for the learner’s understanding, emotional state, and the interpersonal relationship involved. By tailoring feedback to the learner’s capacity and emotional readiness, and fostering a supportive relationship, we can ensure that corrections serve their intended purpose of facilitating growth and learning.
-            </p>
-        </article>
-    </main>
-    
+    <main>       <!-- Include Marked.js library -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Markdown content source in a hidden textarea -->
+<textarea id="markdown-content" style="display:none;">
+
+# The Art of Corrections
+
+&nbsp;&nbsp;&nbsp;&nbsp;Corrections are an integral part of learning, but they can be counterproductive if not delivered with sensitivity and awareness. While the goal of correction is often to guide and improve understanding, excessive or poorly timed corrections can hinder rather than help. To be effective, corrections should be issued thoughtfully, considering the learner’s grasp of the material, their emotional state, and the nature of the relationship between the tutor and the learner.
+
+
+#### Cognitive Bandwidth
+
+People have a limited bandwidth for absorbing new information and skills. For example, if my student, John Smith, makes five different mistakes on the same problem, it’s unlikely that he can process all five corrections at once. Research in working memory suggests that people can juggle about four ideas simultaneously. Even presenting him with two corrections at once might be overwhelming, as he’s trying to consider the new information in the context of what he already knows. It’s the tutor’s role to provide feedback in a manageable way, turning a firehose of information into a water fountain.
+
+#### Emotional State
+
+A learner’s emotional state greatly influences their receptiveness to corrections. When feedback is too frequent or not aligned with a learner’s current level of understanding, it can lead to cognitive overload and feelings of inadequacy. For instance, if John understands the first two steps of a problem but struggles with step three, he might feel ashamed and believe that his intelligence is in question. This sense of failure can deter him from continuing, even if he could eventually grasp the remaining steps. It’s essential to be mindful of verbal and non-verbal cues, such as John’s reaction of “oooohhhh, ok,” which might mask confusion or reluctance. John might fear looking foolish or disappointing me as a tutor. He might even be trying to protect me from shame because they don’t want me to feel bad as a tutor. By delivering corrections with empathy, we can build confidence and encourage perseverance rather than exacerbating feelings of inadequacy.
+
+#### Rapport
+
+The relationship between the tutor and the learner significantly impacts how corrections are received. Building rapport and mutual respect enhances the effectiveness of feedback. Learners are more likely to accept corrections from someone they respect and who genuinely cares about their success. If John feels that corrections come from a place of support and affection, he is less likely to feel demoralized. A positive, trusting relationship creates a safe environment where feedback is viewed as a tool for growth rather than a personal critique. This supportive dynamic encourages learners to embrace corrections and use them as opportunities for improvement.
+
+#### Conclusion
+
+&nbsp;&nbsp;&nbsp;&nbsp;Corrections are most effective when delivered with consideration for the learner’s understanding, emotional state, and the interpersonal relationship involved. By tailoring feedback to the learner’s capacity and emotional readiness, and fostering a supportive relationship, we can ensure that corrections serve their intended purpose of facilitating growth and learning.
+
+</textarea>
+
+<!-- Output container -->
+<!-- <div id="markdown-output"></div> -->
+<article class="container text-container" id="markdown-output"></article>
+
+<!-- Conversion script -->
+<script>
+  // Get the Markdown content from the textarea
+  const markdownContent = document.getElementById('markdown-content').value;
+
+  // Convert the Markdown to HTML
+  const htmlContent = marked.parse(markdownContent);
+
+  // Display the HTML content
+  document.getElementById('markdown-output').innerHTML = htmlContent;
+</script>
+</main>
+ 
 </body>
 </html>
