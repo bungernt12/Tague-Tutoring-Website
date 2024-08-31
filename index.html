@@ -8,18 +8,16 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <nav class="navbar">
-      <a href="#about-container"><p>About</p></a>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Articles</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="./assets/article-pages/corrections.html">The Art of Corrections</a>
-          <a href="./assets/article-pages/optimalFrustration.html">Optimal Frustration Level</a>
-          <a href="https://youtu.be/dQw4w9WgXcQ">The Secret to Success!</a>
-        </div>
-      </div>
-      <a href="#contact"><p>Contact</p></a>
-    </nav>
+    <nav class="navbar" id="navbar"></nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("./navbar.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+          });
+      });
+    </script>
     <main>
       <div class="banner">
         <div class="bannerText">
@@ -48,7 +46,7 @@
             </p>
             <h2>Subjects I Tutor</h2>
             <ul>
-              <li>Chemistry</li>
+              <li>Chemistry (including AP and IB)</li>
               <li>Biology</li>
               <li>Physics</li>
               <li>Math (up through Algebra 2)</li>

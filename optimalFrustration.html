@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimal Frustration Level</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.16/marked.min.js"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="./index.html#about-container"><p>About</p></a>
-        <a href="./corrections.html"><p>Articles</p></a>
-        <a href="./index.html#contact"><p>Contact</p></a>
-    </nav>
+    <!-- loading nav bar from the a different html page so I don't have to adjust it on every page. -->
+    <nav class="navbar" id="navbar"></nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("./navbar.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+          });
+      });
+    </script>
     <main>       <!-- Include Marked.js library -->
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
