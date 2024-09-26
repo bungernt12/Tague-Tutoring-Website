@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.16/marked.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <!-- loading nav bar from the a different html page so I don't have to adjust it on every page. -->
+    <nav class="navbar" id="navbar"></nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("./navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+          });
+      });
+    </script>
+    <main>
+      <!-- Include Marked.js library -->
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+      <!-- Markdown content source in a hidden textarea -->
+      <textarea id="markdown-content" style="display: none">
+
+# Favorite Resources
+
+&nbsp;&nbsp;&nbsp;&nbsp;There are many great resources out there:
+- Youtube videos
+- Interactive demos
+- Online Textbooks
+- Educational blogs. 
+- Even ChatGPT can be useful to get a general understanding about a topic
+  - It does lie/hallucinate occassionally, so always look for verify important info by looking for reputable sources
+
+### Chemistry
+- <a href="https://www.youtube.com/@tdewitt451" target="_blank">**Tyler DeWitt**</a> - Simple, well paced videos
+- <a href="https://www.youtube.com/@TheOrganicChemistryTutor" target="_blank">**TheOrganicChemistryTutor**</a> - From basic to advanced, with lots of examples
+- <a href="https://www.khanacademy.org/science/ap-chemistry-beta" target="_blank">**Khan Academy AP®︎/College Chemistry**</a> - Follows College Board's AP Classroom very closely, giving extra practice for AP students
+
+### Learning and Executive Functioning
+- <a href="https://www.learningscientists.org/" target="_blank">**The Learning Scientists**</a> - Educational Organization dedicated to making scientific research on learning accessible to everyone.
+  - <a href="https://www.learningscientists.org/posters" target="_blank">**Effective Learning Strategies**</a> 
+- <a href="https://www.youtube.com/@SethPerler" target="_blank">**Seth Perler**</a> - Executive functioning coach, great videos
+
+
+</textarea
+      >
+
+      <!-- Output container -->
+      <!-- <div id="markdown-output"></div> -->
+      <article class="container text-container" id="markdown-output"></article>
+
+      <!-- Conversion script -->
+      <script>
+        // Get the Markdown content from the textarea
+        const markdownContent =
+          document.getElementById("markdown-content").value;
+
+        // Convert the Markdown to HTML
+        const htmlContent = marked.parse(markdownContent);
+
+        // Display the HTML content
+        document.getElementById("markdown-output").innerHTML = htmlContent;
+      </script>
+    </main>
+  </body>
+</html>
