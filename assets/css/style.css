@@ -69,7 +69,7 @@ main {
   color: var(--subheader-color); /* 10% */
   border-radius: 8px;
   margin-bottom: 20px;
-  height: 92vh;
+  height: 600px;
   width: 100%;
   max-width: 1000px;
 }
