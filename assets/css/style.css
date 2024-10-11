@@ -244,3 +244,17 @@ section {
 .show {
   display: block;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#email {
+  width: 200px;
+}
+
+#message {
+  width: 300px;
+}
