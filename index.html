@@ -95,26 +95,31 @@
         <section class="contact-info text-container" id="contact">
           <h2>Contact</h2>
             <!-- modify this form HTML and place wherever you want your form -->
-            <form
-            action="https://formspree.io/f/movqayor"
-            method="POST"
-            >
-            <label>
-              Your email:
-              <br>
-              <input type="email" name="email" placeholder="example@example.com">
-            </label>
-            <br>
-            <label>
+<form
+action="https://formspree.io/f/movqayor"
+method="POST"
+enctype="multipart/form-data"
+>
+<div class="form-group">
+  <label for="email">Your email:</label>
+  <input type="email" id="email" name="email" placeholder="example@example.com" required>
+</div>
 
-              What would you like help with?
-              <br>
-              <textarea name="message" placeholder="Chemistry, Algebra 2, etc."></textarea>
-            </label>
-            <br>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
-          </form>
+<div class="form-group">
+  <label for="message">What would you like help with?</label>
+  <textarea id="message" name="message" placeholder="Chemistry, Algebra 2, etc." required></textarea>
+</div>
+
+<div class="form-group">
+  <label for="file">Upload homework or tests (Max 10MB):</label>
+  <input type="file" id="file" name="file" accept="image/*,.pdf,.doc,.docx" />
+</div>
+
+<input type="hidden" name="_next" value="https://taguezachary.com/thank-you.html" />
+
+<button type="submit">Send</button>
+</form>
+
         </section>
       </div>
     </main>
