@@ -8,14 +8,16 @@
     <script src="index.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0S3S66E579"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S3S66E579"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-0S3S66E579');
-</script>
+    gtag("config", "G-0S3S66E579");
+  </script>
   <body>
     <nav class="navbar" id="navbar"></nav>
     <script>
@@ -84,43 +86,66 @@
           </p>
           <p>- Cintia, 2022</p>
           <p>
-            <a
-              href="https://www.wyzant.com/Tutors/Tague
-                "
-              >Click here</a
-            >
-            to view my Wyzant tutoring profile
+            <a href="https://www.wyzant.com/Tutors/Tague">Click here</a> to view
+            my Wyzant tutoring profile
           </p>
         </div>
         <section class="contact-info text-container" id="contact">
           <h2>Contact</h2>
-            <!-- modify this form HTML and place wherever you want your form -->
-<form
-action="https://formspree.io/f/movqayor"
-method="POST"
-enctype="multipart/form-data"
->
-<div class="form-group">
-  <label for="email">Your email:</label>
-  <input type="email" id="email" name="email" placeholder="example@example.com" required>
-</div>
+          <!-- Updated form starts here -->
+          <form
+      action="https://formsubmit.co/taguezz@gmail.com"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <!-- Redirect to thank-you page after submission -->
+      <input
+        type="hidden"
+        name="_next"
+        value="https://taguezachary.com/thank-you.html"
+      />
 
-<div class="form-group">
-  <label for="message">What would you like help with?</label>
-  <textarea id="message" name="message" placeholder="Chemistry, Algebra 2, etc." required></textarea>
-</div>
+      <!-- Honeypot field to prevent spam (optional) -->
+      <input type="text" name="_honey" style="display: none" />
 
-<div class="form-group">
-  <label for="file">Upload homework/classwork/tests (Max 10MB):</label>
-  <input type="file" id="file" name="file" accept="image/*,.pdf,.doc,.docx" />
-</div>
+      <!-- Disable Captcha (optional) -->
+      <input type="hidden" name="_captcha" value="false" />
 
-<input type="hidden" name="_next" value="https://taguezachary.com/thank-you.html" />
+      <!-- Form Fields -->
+      <div class="form-group">
+        <label for="email">Your email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@example.com"
+          required
+        />
+      </div>
 
-<button type="submit">Send</button>
-</form>
+      <div class="form-group">
+        <label for="message">What would you like help with?</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Chemistry, Algebra 2, etc."
+          required
+        ></textarea>
+      </div>
 
-        </section>
+      <div class="form-group">
+        <label for="attachment">Upload homework/classwork/tests (Max 5MB):</label>
+        <input
+          type="file"
+          id="attachment"
+          name="attachment"
+          accept="image/*,.pdf,.doc,.docx"
+        />
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+
       </div>
     </main>
   </body>
